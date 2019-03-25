@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<Head>
+    <title>Input-Form</title>
+
+    <style>
+        .display{
+            background-color: #68be4a;
+            text-align: center;
+        }
+
+        .text-square{
+            width: 400px;
+            height: 250px;
+            background-color: white;
+            padding-top: 50px;
+            padding-bottom: 20px;
+            box-shadow: 1px 1px 15px 0;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+
+        input[type=text]{
+            box-sizing: border-box;
+            width: 70%;
+            height: 50px;
+            border: 0px;
+            margin: 5px 5px;
+            padding: 10px;
+            background-color: #f2f2f2
+        }
+
+        input[type=button]{
+            width: 70%;
+            height: 50px;
+            background-color: #00b241;
+            margin: 10px 10px;
+            border: 0;
+            color: ivory;
+        }
+
+        .text{
+            font-family: 'Trebuchet MS';
+            font-size: 10px;
+        }
+
+        a{
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+    </style>
+</Head>
+
+<body class="display">
+    <div class="text-square">
+        <form>
+            <div>
+                <input type="text" name="username" placeholder="Username">
+            </div>
+            <div>
+                <input type="text" name="password" placeholder="Password">
+            </div>
+            <div>
+                <input type="button" class="button" value="Login">
+            </div>
+        </form>
+        <div class="text">
+            Not Registered? <a href="https://students.swin.edu.au/">Create an Account!</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SignUp Task</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <style>
+            .display{
+                background-color: #ff69b4;
+            }
+            .signup-box{
+                height: 400px;
+                width: 400px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .name-box{
+                box-sizing: border-box;
+                width: 50%;
+                height: 35px;
+                background-color: #f2f2f2;
+                padding: 5px;
+                margin: 5px 0px;
+                border: 0;
+                font-size: default;
+
+            }
+            .text-box{
+                box-sizing: border-box;
+                width: 100%;
+                height: 35px;
+                background-color: #f2f2f2;
+                padding: 5px;
+                margin: 5px 1px;
+                border: 0;
+            }
+            .text{
+                font-size: 15px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: aliceblue;
+            }
+            a{
+                text-decoration: none;
+                color: midnightblue;
+            }
+            input[type=button]{
+                background-color: #9400d3;
+                color: white;
+                border: 0;
+                width: 100%;
+                height: 35px;
+            }
+            .sign{
+                font-size: 10px;
+                text-align: center;
+                margin: 10px 10px;
+            }
+            .facebook{
+                box-sizing: border-box;
+                width: 50%;
+                height: 30px;
+                background-color: #43609c;
+                color: white;
+                font-size: 15px;
+                display: inline-block;
+                padding: 5px;
+            }
+            .twitter{
+                box-sizing: border-box;
+                width: 50%;
+                height: 30px;
+                background-color: #00aced;
+                color: white;
+                font-size: 15px;
+                display: inline-block;
+                padding: 5px;
+            }
+            .container{
+                box-sizing: border-box;
+                white-space: nowrap;
+            }
+            .links{
+                width: 100%;
+                white-space: nowrap;
+                font-size: 0;
+            }
+        </style>
+    </head>
+    <body class="display">
+        <div class="signup-box">
+            <div class="links">
+                <div class="facebook">
+                    <i class="fab fa-facebook-f"></i> Connect with Facebook
+                </div>
+                <div class="twitter">
+                    <i class="fab fa-twitter"></i> Connect with Twitter
+                </div>
+            </div>
+            <div class="sign">
+                Or sign up with
+            </div>
+            <form>
+                <div class="container">
+                    <input class="name-box" type="text" name="First Name" placeholder="First Name">
+                    <input class="name-box" type="text" name="Last Name" placeholder="Last Name">
+                </div>
+                <div>
+                    <input  class="text-box" type="text" name="Email" placeholder="your@email.here">
+                </div>
+                <div>
+                    <input  class="text-box" type="password" name="Password" placeholder="Password">
+                </div>
+            </form>
+            <div class="text">
+                By creating an account, you agree to our <a href="https://getterms.io/">Terms & Conditions</a>
+            </div>
+            <div>
+                <form>
+                    <input type="button" class="button" value="Create Account">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
