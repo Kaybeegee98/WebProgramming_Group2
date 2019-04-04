@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Bootstrap Trial</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            .col{
+                text-align: center;
+                font-size: 150px;
+            }
+
+            .col-3{
+                background-color: grey;
+                border-radius: 5px;
+                text-align: center;
+                color: white;
+                font-size: 15px;
+                margin-left: 50px;
+                padding-top: 10px;
+            }
+
+                .col-sm-{
+                text-align: center;
+                padding-top: 100px;
+                font-size: 50px;
+            }
+
+            .text2{
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body onload="startTime()">
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col">
+                    <div id="days"></div>
+                </div>
+                <div class="col-sm-">
+                    :
+                </div>
+                <div class="col">
+                    <div id="hours"></div>
+                </div>
+                <div class="col-sm-">
+                    :
+                </div>
+                <div class="col">
+                    <div id="minutes"></div>
+                </div>
+                <div class="col-sm-">
+                    :
+                </div>
+                <div class="col">
+                    <div id="seconds"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                    <div class="col">
+                        <div class="text2">Days</div>
+                    </div>
+                    <div class="col">
+                        <div class="text2">Hours</div>
+                    </div>
+                    <div class="col">
+                        <div class="text2">Minutes</div>
+                    </div>
+                    <div class="col">
+                        <div class="text2">Seconds</div>
+                    </div>
+                </div>
+
+            <div class="row">
+                <div class="col-5">
+                    Time Started: Mon Apr 01 2019 10:08:49 GMT +1100 (AUS Eastern Daylight Time)
+                </div>
+                <div class="col-3">Cancel</div>
+            </div>
+        </div>
+
+        <script>
+            function startTime(){
+                var today = new Date();
+                var d = today.getDay();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+
+                var t = setTimeout(startTime, 500);
+
+                document.getElementById("days").innerHTML = d;
+                document.getElementById("hours").innerHTML = h;
+                document.getElementById("minutes").innerHTML = m;
+                document.getElementById("seconds").innerHTML = s;
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Javascript Extension Task 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <Style>
+        .numBox{
+            width: 50px;
+            height: 25px;
+            border: black;
+        }
+        .text{
+            font-size: 25px;
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="numBox">
+        <input type="number" id="NumberBox1">
+    </div>
+    <div class="text">
+        +
+    </div>
+    <div class="numBox">
+        <input type="number" id="NumberBox2">
+    </div>
+    <button id="calculate">Click Here Please!</button>
+    <div id="answer"></div>
+
+    <script>
+        var calculate = document.getElementById("calculate");
+        calculate.onclick = ButtonClicked;
+
+        function ButtonClicked() {
+            var NumberBox1 = parseInt(document.getElementById("NumberBox1").value);
+            var NumberBox2 = parseInt(document.getElementById("NumberBox2").value);
+            console.log(NumberBox1,NumberBox2);
+            console.log("Button Pressed");
+            document.getElementById("answer").innerHTML = NumberBox1 + NumberBox2;
+        }
+
+    </script>
+</body>
+
+</html>

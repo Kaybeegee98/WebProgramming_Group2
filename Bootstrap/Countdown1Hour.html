@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Bootstrap Trial</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            .col{
+                text-align: center;
+                font-size: 150px;
+            }
+
+            .col-3{
+                background-color: grey;
+                border-radius: 5px;
+                text-align: center;
+                color: white;
+                font-size: 15px;
+                margin-left: 50px;
+                padding-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div id="days">
+                        0
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="hours">0</div>
+                </div>
+                <div class="col">
+                    <div id="minutes">
+                        0
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="seconds">
+                        0
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <input type="number" id="inmin" placeholder="Enter Minutes">
+                </div>
+                <div>
+                    <input type="number" id="insec" placeholder="Enter Seconds">
+                </div>
+            </div>
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+        </div>
+
+        <script>
+            var start = document.getElementById("start");
+            start.onclick = startTime;
+            var tcountdown = null;
+            
+
+
+            
+            function startTime(){
+                var m = parseInt(document.getElementById("inmin").value);
+                var s = parseInt(document.getElementById("insec").value);
+                var t = setTimeout(countdown, 1000);
+
+                document.getElementById("minutes").innerHTML = m;
+                document.getElementById("seconds").innerHTML = s;
+
+                var stop = document.getElementById("stop");
+                stop.onclick = stopTime;
+         
+
+                function countdown(){
+
+
+                    if(s == 0){
+                        m = m-1;
+                        s = 60;
+                    }
+                    if(s > 0){
+                        s = s - 1;
+                    }
+                    document.getElementById("minutes").innerHTML = m;
+                    document.getElementById("seconds").innerHTML = s;
+                    tcountdown = setTimeout(countdown, 1000);
+                }
+                
+                function stopTime(){
+                    clearTimeout(tcountdown);
+                }
+            }
+        </script>
+    </body>
+</html>
